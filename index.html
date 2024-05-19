@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Math Calculator</title>
+    <link rel="stylesheet" href="kel4b.css">
+    <script src="kel4c.js"></script>
+</head>
+<body>
+    <header class="title-bar">
+        <div class="title-container">
+            <h1>Advanced Math Calculator by 4MATH</h1>
+            <nav>
+                <ul>
+                    <li><a href="#basic-arithmetic">Basic Arithmetic</a></li>
+                    <li><a href="#algebra">Algebra</a></li>
+                    <li><a href="#geometry">Geometry</a></li>
+                    <li><a href="#trigonometry">Trigonometry</a></li>
+                    <li><a href="#calculus">Calculus</a></li>
+                    <li><a href="#statistics">Statistics</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="calculator">
+            <!-- Basic Arithmetic -->
+            <div class="section" id="basic-arithmetic">
+                <h2>Basic Arithmetic</h2>
+                <div class="input-group">
+                    <input type="number" id="num1" placeholder="Enter first number">
+                    <input type="number" id="num2" placeholder="Enter second number">
+                    <select id="operation">
+                        <option value="add">Add</option>
+                        <option value="subtract">Subtract</option>
+                        <option value="multiply">Multiply</option>
+                        <option value="divide">Divide</option>
+                    </select>
+                    <button class="btn" onclick="calculateBasic()">Calculate</button>
+                </div>
+                <div class="result" id="basicResult"></div>
+            </div>
+            
+            <!-- Algebra -->
+            <div class="section" id="algebra">
+                <h2>Algebra</h2>
+                <div class="input-group">
+                    <input type="text" id="quadraticEquation" placeholder="Enter quadratic equation (e.g., ax^2+bx+c=0)">
+                    <button class="btn" onclick="solveQuadratic()">Solve Quadratic</button>
+                </div>
+                <div class="result" id="algebraResult"></div>
+            </div>
+            
+            <!-- Geometry -->
+            <div class="section" id="geometry">
+                <h2>Geometry</h2>
+                <div class="input-group">
+                    <input type="number" id="radius" placeholder="Enter radius">
+                    <button class="btn" onclick="calculateCircleArea()">Calculate Circle Area</button>
+                </div>
+                <div class="result" id="geometryResult"></div>
+            </div>
+            
+            <!-- Trigonometry -->
+            <div class="section" id="trigonometry">
+                <h2>Trigonometry</h2>
+                <div class="input-group">
+                    <input type="number" id="angle" placeholder="Enter angle in degrees">
+                    <select id="trigFunction">
+                        <option value="sin">sin</option>
+                        <option value="cos">cos</option>
+                        <option value="tan">tan</option>
+                    </select>
+                    <button class="btn" onclick="calculateTrig()">Calculate</button>
+                </div>
+                <div class="result" id="trigResult"></div>
+            </div>
+            
+            <!-- Calculus -->
+            <div class="section" id="calculus">
+                <h2>Calculus</h2>
+                <div class="input-group">
+                    <input type="text" id="function" placeholder="Enter function (e.g., 3*x^2)">
+                    <button class="btn" onclick="calculateDerivative()">Calculate Derivative</button>
+                    <button class="btn" onclick="calculateIntegral()">Calculate Integral</button>
+                </div>
+                <div class="result" id="calculusResult"></div>
+            </div>
+            
+            <!-- Statistics -->
+            <div class="section" id="statistics">
+                <h2>Statistics</h2>
+                <div class="input-group">
+                    <input type="text" id="data" placeholder="Enter data (comma separated)">
+                    <button class="btn" onclick="calculateStatistics()">Calculate Statistics</button>
+                </div>
+                <div class="result" id="statisticsResult"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
