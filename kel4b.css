@@ -1,0 +1,146 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('https://cdn.wallpapersafari.com/47/95/3Lwnjz.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.title-bar {
+    width: 100%;
+    background: rgba(0, 123, 255, 0.9); /* Semi-transparent background */
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.title-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-container h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFDD57;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 100px;
+    width: 100%;
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px; /* Adjust for the fixed title bar */
+    overflow-y: auto;  /* Ensure scrolling if content is too tall */
+    height: calc(100vh - 100px);  /* Ensure container fits within the viewport */
+}
+
+.calculator {
+    padding: 100px;
+    width: 100%;
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+input, select, button {
+    width: 100%;
+    max-width: 400px;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input:focus, select:focus, button:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button.btn {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.result {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+    .input-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    input, select, button {
+        max-width: 100%;
+    }
+}
